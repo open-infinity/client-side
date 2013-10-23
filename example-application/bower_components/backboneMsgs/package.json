@@ -1,0 +1,22 @@
+{
+  "author": "Alessandro Cogliati <alessandro.coglaiti@gmail.com>",
+  "name": "backboneMsgs",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/..............."
+  },
+  "dependencies": {
+    "backbone": "~1.x.x",
+    "underscore": "~1.4.x"
+  },
+  "devDependencies": {
+    "uglify-js": "~1.2.6",
+    "mocha-phantomjs": "~1.1.2",
+    "browserify": "~2.x.x"
+  },
+  "main": "./backboneMsgs.js",
+  "engines": {
+    "node": "*"
+  }
+}
