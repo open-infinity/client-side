@@ -1,0 +1,6 @@
+{
+  "name": "backboneMsgs",
+  "version": "0.0.1",
+  "main": "./backboneMsgs.js",
+  "dependencies": {}
+}
