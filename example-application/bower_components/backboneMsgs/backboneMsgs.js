@@ -6,18 +6,18 @@
 
 (function (root, factory) {
    if (typeof exports === 'object' && root.require) {
-     module.exports = factory(require("underscore"), require("backbone"), require("msgs"), require("queue"));
+     module.exports = factory(require("underscore"), require("backbone"), require("msgs"), require("queue"), require("rest"));
    } else if (typeof define === "function" && define.amd) {
       // AMD. Register as an anonymous module.
-      define(["underscore","backbone","msgs", "queue"], function(_, Backbone, msgs, queue) {
+      define(["underscore","backbone","msgs", "queue", "rest"], function(_, Backbone, msgs, queue, rest) {
         // Use global variables if the locals are undefined.
-        return factory(_ || root._, Backbone || root.Backbone , msgs /*|| root.msgs*/);
+        return factory(_ || root._, Backbone || root.Backbone , msgs /*|| root.msgs*/, rest /*|| root.rest*/);
       });
    } else {
       // RequireJS isn't being used. Assume underscore and backbone are loaded in <script> tags
-      factory(_, Backbone, msgs, queue);
+      factory(_, Backbone, msgs, queue, rest);
    }
-}(this, function(_, Backbone, msgs, queue) {
+}(this, function(_, Backbone, msgs, queue, rest) {
 
 
 
@@ -76,8 +76,8 @@
 	console.log(msgs );
 	//bus test1 queue channel --------------------------------------
 	/*	
-	//	console.log();
-		console.log(msgs.qChannel.type);
+		//	console.log();
+			console.log(msgs.qChannel.type);
 	*/	
 	//bus test2 default direct channel------------------------------
 			

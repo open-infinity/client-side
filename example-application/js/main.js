@@ -50,7 +50,8 @@ require.config({
 		msgs: '../bower_components/msgsMaster/msgs',
 		backboneMsgs: '../bower_components/backboneMsgs/backboneMsgs',
 		queue: '../bower_components/msgsMaster/channels/queue',
-		pollable: '../bower_components/msgsMaster/channels/dispatchers/pollable'
+		pollable: '../bower_components/msgsMaster/channels/dispatchers/pollable',
+		rest: '../bower_components/rest-master/rest'
  	       
 	}
 });

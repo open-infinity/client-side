@@ -62,7 +62,8 @@
 			return require(moduleId);
 		}
 
-		return require('./client/xhr');
+		//return require('./client/xhr'); bower_components\rest-master\client
+		return require("../bower_components/rest-master/client/xhr");
 	});
 
 }(
