@@ -31,7 +31,7 @@
 	//console.log(this.bus);
 
 	//bus test1 queue channel --------------------------------------
-			this.qChannel = this.bus.queueChannel();
+			//this.qChannel = this.bus.queueChannel();
 			//console.log(this.qChannel.type);
 			//console.log(this.qChannel);
 	
