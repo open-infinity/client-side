@@ -28,23 +28,21 @@
 	//Constructor code here!  
   
 	this.bus = msgs.bus();
-	console.log(this.bus);
+	//console.log(this.bus);
 
 	//bus test1 queue channel --------------------------------------
 			this.qChannel = this.bus.queueChannel();
-			
-			console.log(this.qChannel.type);
-			console.log(this.qChannel);
+			//console.log(this.qChannel.type);
+			//console.log(this.qChannel);
 	
 	//bus test2 default direct channel------------------------------
 
 			this.publisher = this.bus.channel();
-			
-			console.log(this.publisher.type);
-			console.log(this.publisher);
+			//console.log(this.publisher.type);
+			//console.log(this.publisher);
 			this.consumer = {
 				handle: function (message) {
-					console.log(message);
+					console.log("Message in channel: "+message+ "---------");
 				}
 			};
 			
@@ -73,11 +71,6 @@
    Backbone.Msgs.sync =function(method, model, options) { 
     var msgs = model.msgs || model.collection.msgs;
 
-	console.log(method );
-	console.log(model );
-	console.log("options");
-	console.log(options );
-	
 	//bus test1 queue channel --------------------------------------
 	/*	
 		//	console.log();
@@ -85,13 +78,8 @@
 	*/	
 	//bus test2 default direct channel------------------------------
 			
-			msgs.publisher.send('hello world');
-			if (model.models.lenght > 0) {
-			for (var index = 0 ;  index < model.models.lenght ; index++) {
-			alert(model.models[index].attributes);
-			//	alert(model.attributes[model.title]);
-		//msgs.publisher.send(model.models);
-
+			msgs.publisher.send(JSON.stringify(model));
+/*					
 				client = rest
 				.chain(retry, { initial: 250, max: 2000 })
 				.chain(errorCode, {code: 404})
@@ -108,9 +96,8 @@
 					function(response) {
 						console.error('response error: ', response);
 					}
-				);
-			}			
-	}
+				);						
+*/	
   //  return what expected by Backbone.sync;
   };  
  

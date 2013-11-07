@@ -88,8 +88,6 @@ require([
 //	/*jshint nonew:false*/
 //	// Initialize routing and start Backbone.history()
 
-console.log(window);
-
 	new Workspace();
 	Backbone.history.start();
 
