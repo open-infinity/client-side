@@ -14,7 +14,8 @@
 
 		var beget, origin, urlRE, absoluteUrlRE, fullyQualifiedUrlRE;
 
-		beget = require('./util/beget');
+		//beget = require('./util/beget');
+		beget = require('beget');
 
 		urlRE = /([a-z][a-z0-9\+\-\.]*:)\/\/([^@]+@)?(([^:\/]+)(:([0-9]+))?)?(\/[^?#]*)?(\?[^#]*)?(#\S*)?/i;
 		absoluteUrlRE = /^([a-z][a-z0-9\-\+\.]*:\/\/|\/)/i;

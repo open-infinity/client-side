@@ -27,10 +27,10 @@
 	 * @author Scott Andrews
 	 */
 
-    define(['../bower_components/msgsMaster/channels/dispatchers/broadcast', 
-	'../bower_components/msgsMaster/channels/dispatchers/direct',
-	'../bower_components/msgsMaster/channels/dispatchers/unicast',
-	'../bower_components/whenMaster/when' ], function (broadcastDispatcher, directDispatcher, unicastDispatcher, when) {
+    define(['broadcast', 
+	'direct',
+	'unicast',
+	'when' ], function (broadcastDispatcher, directDispatcher, unicastDispatcher, when) {
 			
 /*
 		var broadcastDispatcher, directDispatcher, unicastDispatcher, when;

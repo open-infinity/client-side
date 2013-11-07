@@ -13,7 +13,7 @@
 
 		var mixin;
 
-		mixin = require('./mixin');
+		mixin = require('mixin');
 
 		function Beget() {}
 

@@ -11,9 +11,10 @@
 	define(function (require) {
 
 		var interceptor, when;
-
-		interceptor = require('../interceptor');
+		
+		interceptor = require('interceptor');
 		when = require('when');
+
 
 		/**
 		 * Rejects the response promise based on the status code.

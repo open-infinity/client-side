@@ -13,9 +13,10 @@
 
 		var interceptor, when, delay;
 
-		interceptor = require('../interceptor');
+		interceptor = require('interceptor');
 		when = require('when');
-		delay = require('when/delay');
+		delay = require('delay');
+		
 
 		/**
 		 * Retries a rejected request using an exponential backoff.

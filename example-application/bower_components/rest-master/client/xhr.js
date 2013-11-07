@@ -12,11 +12,9 @@
 
 		var when, UrlBuilder, normalizeHeaderName, headerSplitRE;
 
-		//when = require('when');
-		when = require('../../whenMaster/when');
-		
-		UrlBuilder = require('../UrlBuilder');
-		normalizeHeaderName = require('../util/normalizeHeaderName');
+		when = require('when');
+		UrlBuilder = require('UrlBuilder');
+		normalizeHeaderName = require('normalizeHeaderName');
 
 		// according to the spec, the line break is '\r\n', but doesn't hold true in practice
 		headerSplitRE = /[\r|\n]+/;

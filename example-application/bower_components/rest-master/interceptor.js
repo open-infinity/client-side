@@ -12,10 +12,19 @@
 
 		var defaultClient, beget, mixin, when;
 
+		defaultClient = require('rest');
+		beget = require('beget');
+		mixin = require('mixin');
+		when = require('when');
+		
+		
+		
+		/*
 		defaultClient = require('./rest');
 		beget = require('./util/beget');
 		mixin = require('./util/mixin');
 		when = require('when');
+		*/
 
 		/**
 		 * Interceptors have the ability to intercept the request and/org response

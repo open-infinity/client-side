@@ -14,7 +14,7 @@ define(function(require) {
 	/*global vertx,setTimeout*/
 	var when, setTimer;
 
-	when = require('./when');
+	when = require('when');
 
 	setTimer = typeof vertx === 'object'
 		? function (f, ms) { return vertx.setTimer(ms, f); }

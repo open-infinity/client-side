@@ -34,7 +34,8 @@ require.config({
 	       enquire: {
 			exports: 'enquire'
 		}
-	       /*
+
+	     /*  
 		msgs: {
 			exports: 'msgs'
 		}
@@ -47,11 +48,31 @@ require.config({
 	//	backboneLocalstorage: '../bower_components/backbone.localStorage/backbone.localStorage',    
 		text: '../bower_components/requirejs-text/text',
 		enquire: '../bower_components/enquire/enquire',
-		msgs: '../bower_components/msgsMaster/msgs',
 		backboneMsgs: '../bower_components/backboneMsgs/backboneMsgs',
+		
+		//msgs.js 
+		msgs: '../bower_components/msgsMaster/msgs',
 		queue: '../bower_components/msgsMaster/channels/queue',
 		pollable: '../bower_components/msgsMaster/channels/dispatchers/pollable',
-		rest: '../bower_components/rest-master/rest'
+		broadcast: '../bower_components/msgsMaster/channels/dispatchers/broadcast', 
+		direct: '../bower_components/msgsMaster/channels/dispatchers/direct',
+		unicast: '../bower_components/msgsMaster/channels/dispatchers/unicast',
+		_subscribable: '../bower_components/msgsMaster/channels/dispatchers/_subscribable',
+		
+		//rest.js
+		rest: '../bower_components/rest-master/rest',
+		xhr: '../bower_components/rest-master/client/xhr',
+		errorCode: '../bower_components/rest-master/interceptor/errorCode',
+		retry: '../bower_components/rest-master/interceptor/retry',
+		interceptor: '../bower_components/rest-master/interceptor',
+		UrlBuilder: '../bower_components/rest-master/UrlBuilder',
+		normalizeHeaderName: '../bower_components/rest-master/util/normalizeHeaderName',
+		mixin: '../bower_components/rest-master/util/mixin',
+		beget: '../bower_components/rest-master/util/beget',
+		
+		//when.js
+		when : '../bower_components/whenMaster/when',
+		delay : '../bower_components/whenMaster/delay'
  	       
 	}
 });
@@ -66,6 +87,9 @@ require([
 ], function (Backbone, /*AppView,*/ Workspace, enquire, require/*, msgs*/) {
 //	/*jshint nonew:false*/
 //	// Initialize routing and start Backbone.history()
+
+console.log(window);
+
 	new Workspace();
 	Backbone.history.start();
 

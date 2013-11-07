@@ -16,7 +16,7 @@
 	 */
 	define(function (require) {
 
-		var subscribableDispatcher = require('./_subscribable');
+		var subscribableDispatcher = require('_subscribable');
 
 		/**
 		 * Dispatch messages to a single subscribed handler selected by the
