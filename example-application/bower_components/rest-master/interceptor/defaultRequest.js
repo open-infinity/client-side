@@ -12,8 +12,8 @@
 
 		var interceptor, mixinUtil, defaulter;
 
-		interceptor = require('../interceptor');
-		mixinUtil = require('../util/mixin');
+		interceptor = require('interceptor');
+		mixinUtil = require('mixin');
 
 		defaulter = (function () {
 

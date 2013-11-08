@@ -63,6 +63,8 @@ require.config({
 		rest: '../bower_components/rest-master/rest',
 		xhr: '../bower_components/rest-master/client/xhr',
 		errorCode: '../bower_components/rest-master/interceptor/errorCode',
+		defaultRequest: '../bower_components/rest-master/interceptor/defaultRequest',
+		entity: '../bower_components/rest-master/interceptor/entity',
 		retry: '../bower_components/rest-master/interceptor/retry',
 		interceptor: '../bower_components/rest-master/interceptor',
 		UrlBuilder: '../bower_components/rest-master/UrlBuilder',
@@ -97,7 +99,7 @@ require([
 	queryD = "screen and (min-width: 800px)";
 	handlerM = {
 		match : function() {
-			console.log("matched queryM");
+			console.log("matched query Mobile");
 			require([    
 					'views/appM'
 					], function (AppViewM) {
@@ -106,12 +108,12 @@ require([
 							//var myVM = new AppViewM();
 						});
 		},
-		unmatch : function() { console.log("handlerM unmatched"); }
+		unmatch : function() { console.log("UNmatched query Mobile"); }
 	};
 	
 	handlerD = {
 		match : function() {
-			console.log("matched queryD");
+			console.log("matched query Desktop ");
 			require([    
 					'views/app'
 					], function (AppView) {
@@ -120,7 +122,7 @@ require([
 							var myV = new AppView();
 						});
 		},
-		unmatch : function() { console.log("queryD unmatched"); }
+		unmatch : function() { console.log("UNmatched query Desktop"); }
 	};
 
 		enquire.register(queryM, handlerM);

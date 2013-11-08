@@ -12,7 +12,7 @@
 
 		var interceptor;
 
-		interceptor = require('../interceptor');
+		interceptor = require('interceptor');
 
 		/**
 		 * Returns the response entity as the response, discarding other response

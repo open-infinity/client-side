@@ -6,18 +6,18 @@
 
 (function (root, factory) {
    if (typeof exports === 'object' && root.require) {
-     module.exports = factory(require("underscore"), require("backbone"), require("msgs"), require("queue"), require("rest"), require("errorCode"), require("retry"));
+     module.exports = factory(require("underscore"), require("backbone"), require("msgs"), require("queue"), require("rest"), require("errorCode"), require("retry"), require("defaultRequest"), require("entity"));
    } else if (typeof define === "function" && define.amd) {
       // AMD. Register as an anonymous module.
-      define(["underscore","backbone","msgs", "queue", "rest", "errorCode", "retry"], function(_, Backbone, msgs, queue, rest, errorCode, retry) {
+      define(["underscore","backbone","msgs", "queue", "rest", "errorCode", "retry", "defaultRequest", "entity"], function(_, Backbone, msgs, queue, rest, errorCode, retry, defaultRequest, entity) {
         // Use global variables if the locals are undefined.
-        return factory(_ || root._, Backbone || root.Backbone , msgs /*|| root.msgs*/, rest /*|| root.rest*/, errorCode/*|| root.errorCode*/, retry /*|| root.retry*/);
+        return factory(_ || root._, Backbone || root.Backbone , msgs /*|| root.msgs*/, rest /*|| root.rest*/, errorCode/*|| root.errorCode*/, retry /*|| root.retry*/, defaultRequest, entity );
       });
    } else {
       // RequireJS isn't being used. Assume underscore and backbone are loaded in <script> tags
-      factory(_, Backbone, msgs, queue, rest, errorCode, retry);
+      factory(_, Backbone, msgs, queue, rest, errorCode, retry, defaultRequest, entity);
    }
-}(this, function(_, Backbone, msgs, queue, rest, errorCode, retry) {
+}(this, function(_, Backbone, msgs, queue, rest, errorCode, retry, defaultRequest, entity ) {
 
 
 
@@ -50,6 +50,7 @@
     
   };
 
+	//Extend Backbone.Msgs with new functions
     _.extend(Backbone.Msgs.prototype, {
 
       /*
@@ -70,7 +71,7 @@
 //  Backbone.Msgs.sync = window.MyMsgs.sync = function(method, model, options) {
    Backbone.Msgs.sync =function(method, model, options) { 
     var msgs = model.msgs || model.collection.msgs;
-
+var resourceUrl = "http://localhost:8080/foo";
 	//bus test1 queue channel --------------------------------------
 	/*	
 		//	console.log();
@@ -81,6 +82,7 @@
 			msgs.publisher.send(JSON.stringify(model));
 /*					
 				client = rest
+				.chain(defaultRequest, { method: 'POST', entity: JSON.stringify(model)  })
 				.chain(retry, { initial: 250, max: 2000 })
 				.chain(errorCode, {code: 404})
 				.chain(errorCode, { code: 500 });
@@ -97,7 +99,7 @@
 						console.error('response error: ', response);
 					}
 				);						
-*/	
+	*/
   //  return what expected by Backbone.sync;
   };  
  
