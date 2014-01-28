@@ -18,7 +18,8 @@
     "zepto": "1.0",
     "when": "*",
     "backbone": "1.0.0",
-    "underscore": "1.5.2"
+    "underscore": "1.5.2",
+    "crypto-js": "*"
   },
   "authors": [
     "alesco <alessandro.cogliati@gmail.com>",
@@ -41,3 +42,4 @@
     "src/main/resources/META-INF/web-resources/scripts"
   ]
 }
+
