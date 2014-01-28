@@ -1,0 +1,14 @@
+{
+  "name": "uglify-js",
+  "homepage": "https://github.com/mishoo/UglifyJS",
+  "version": "1.3.4",
+  "_release": "1.3.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.3.4",
+    "commit": "a90b3348b174dad93898890b0ec61cc7ac5a31c1"
+  },
+  "_source": "git://github.com/mishoo/UglifyJS.git",
+  "_target": "1.3.4",
+  "_originalSource": "uglify-js"
+}
