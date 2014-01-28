@@ -1,6 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.openinfinity.clientside</groupId>
-  <artifactId>open-infinity-clientside</artifactId>
-  <version>1.0.0.RELEASE</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.openinfinity.clientside</groupId>
+	<artifactId>open-infinity-clientside</artifactId>
+	<version>1.0.0.RELEASE</version>
+	<properties>
+		<handlebars-version>1.2.1</handlebars-version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.github.jknack</groupId>
+			<artifactId>handlebars</artifactId>
+			<version>${handlebars-version}</version>
+		</dependency>
+	</dependencies>
 </project>
