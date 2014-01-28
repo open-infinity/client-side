@@ -5,13 +5,13 @@
 	<artifactId>open-infinity-clientside</artifactId>
 	<version>1.0.0.RELEASE</version>
 	<properties>
-		<handlebars-version>1.2.1</handlebars-version>
+		<handlebars>1.2.1</handlebars>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.github.jknack</groupId>
 			<artifactId>handlebars</artifactId>
-			<version>${handlebars-version}</version>
+			<version>${handlebars}</version>
 		</dependency>
 	</dependencies>
 </project>
