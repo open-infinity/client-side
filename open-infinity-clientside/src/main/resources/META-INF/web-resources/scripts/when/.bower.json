@@ -36,6 +36,6 @@
     "commit": "8521d78551abdbc28e29a59ebf9c2684ee3d48f1"
   },
   "_source": "git://github.com/cujojs/when.git",
-  "_target": "*",
+  "_target": ">1.0.0 <=3.0.0",
   "_originalSource": "when"
 }

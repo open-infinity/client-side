@@ -20,7 +20,8 @@
     "backbone": "1.0.0",
     "underscore": "1.5.2",
     "crypto-js": "*",
-    "bootstrap": "3.0.3"
+    "bootstrap": "3.0.3",
+    "msgs": "0.3.3"
   },
   "authors": [
     "alesco <alessandro.cogliati@gmail.com>",
