@@ -2,6 +2,7 @@ Open Infinity cliend-side MVC framwork utilizes best-of-breed scripts for buildi
 
 1.0.0 RELEASE Content:
 * almond 0.2.6
+* bootstrap 3.0.3
 * domready 2.0.1
 * enquire 2.0.0
 * handlebars 1.0.0
@@ -22,7 +23,7 @@ Open Infinity cliend-side MVC framwork utilizes best-of-breed scripts for buildi
 
 Installation guide:
 
-cd <your build directory>
+cd <<your build directory>>
 
 npm install -g bower
 

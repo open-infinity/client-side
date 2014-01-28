@@ -19,7 +19,8 @@
     "when": "*",
     "backbone": "1.0.0",
     "underscore": "1.5.2",
-    "crypto-js": "*"
+    "crypto-js": "*",
+    "bootstrap": "3.0.3"
   },
   "authors": [
     "alesco <alessandro.cogliati@gmail.com>",
