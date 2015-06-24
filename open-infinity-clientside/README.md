@@ -1,6 +1,7 @@
 Open Infinity cliend-side MVC framwork utilizes best-of-breed scripts for building modern HTML 5 based applications.
 
 1.1.0 RELEASE Content:
+* angular 1.3.15
 * almond 0.3.1
 * backbone 1.2.0
 * bootstrap 3.3.4
